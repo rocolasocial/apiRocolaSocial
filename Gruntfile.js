@@ -11,6 +11,7 @@ module.exports = function (grunt) {
           'Gruntfile.js',
           'app.js',
           'routes/*.js',
+          'mongoose_models/*.js',
           'bin/www'
         ],
         directives : {

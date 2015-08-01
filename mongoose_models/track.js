@@ -6,10 +6,10 @@ var mongoose = require('mongoose');
 var trackSchema = mongoose.Schema({
   _idUser: {
     type: String
-    },
+  },
   _idTrack: {
     type: String
-    },
+  },
   artist: {
     type: String,
     trim: true,
@@ -57,4 +57,4 @@ var trackSchema = mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Track', userSchema);
+module.exports = mongoose.model('Track', trackSchema);

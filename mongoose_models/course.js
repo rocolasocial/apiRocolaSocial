@@ -10,7 +10,7 @@ var courseSchema = mongoose.Schema({
   tracks: {
     type: Array,
     required: true
-  },
+  }
 });
 
-module.exports = mongoose.model('Course', userSchema);
+module.exports = mongoose.model('Course', courseSchema);
