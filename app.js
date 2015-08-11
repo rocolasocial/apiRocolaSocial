@@ -7,8 +7,6 @@ var path = require('path');
 // var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var users = require('./routes/users');
-var tracks = require('./routes/tracks');
 var courses = require('./routes/courses');
 
 var app = express();
@@ -18,9 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser());
 
-app.use('api/users', users);
-app.use('api/tracks', tracks);
-app.use('api/courses', courses);
+app.use('/api/courses', courses);
 
 // catch 404 and forward to error handler
 /*jslint unparam: true */
