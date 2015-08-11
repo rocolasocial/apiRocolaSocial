@@ -3,8 +3,15 @@
 
 module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-jslint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.initConfig({
+    watch: {
+      js: {
+        files: ['*.js', 'routes/*.js', 'mongoose_models/*.js', 'bin/www'],
+        tasks: ['lint']
+      }
+    },
     jslint: {
       all : {
         src: [
@@ -24,5 +31,6 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('lint', 'jslint');
+  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('lint', ['jslint']);
 };

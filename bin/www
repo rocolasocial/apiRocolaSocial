@@ -16,7 +16,7 @@ var mongoose = require('mongoose');
  * Database connection
  */
 
-mongoose.connect('mongodb://localhost/devftest');
+mongoose.connect('mongodb://localhost/ghostfmtest');
 
 var db = mongoose.connection;
 
